@@ -8,15 +8,29 @@ use App\Author;
 
 class BookController extends Controller
 {
-    public function show(Request $request)
+    protected array $search_params;
+
+    public function __construct()
     {
-        $url_query = $request->query();
-        $books = Book::orderBy('title');
-        $authors = Author::all();
-        $search_params = [
+        $this->search_params = [
             'title' => 'Title',
             'author' => 'Author',
         ];
+    }
+
+    public function show()
+    {
+        return view('index', [
+                            'books' => Book::orderBy('title')->simplePaginate(5),
+                            'authors' => Author::all(),
+                            'search_params' => $this->search_params
+                            ]);
+    }
+
+    public function showBySearchQuery(Request $request)
+    {
+        $books = '';
+        $url_query = $request->query();
 
         if(array_key_exists('search', $url_query)) {
             $books = Book::searchQuery($url_query);
@@ -25,21 +39,12 @@ class BookController extends Controller
         }
 
         return view('index', [
-                            'books' => $books->simplePaginate(5),
-                            'authors' => $authors,
-                            'search_params' => $search_params
-                            ]);
+            'books' => $books->simplePaginate(5),
+            'authors' => Author::all(),
+            'search_params' => $this->search_params
+            ]);
     }
 
-    public function showBySearchQuery(Request $request)
-    {
-        $url_query = $request->query();
-    }
-
-    public function showByOrderQuery(Request $request)
-    {
-
-    }
 
     public function store(Request $request)
     {

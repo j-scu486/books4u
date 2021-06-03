@@ -17,5 +17,6 @@ Route::post('/author/{author_id}', 'AuthorController@update');
 
 // Book
 Route::get('/', 'BookController@show');
+Route::get('/search', 'BookController@showBySearchQuery');
 Route::post('/books/create', 'BookController@store');
 Route::delete('/books/delete/{book_id}', 'BookController@destroy');
