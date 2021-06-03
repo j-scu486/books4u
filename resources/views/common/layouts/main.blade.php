@@ -8,7 +8,9 @@
         <title>Books4u</title>
     </head>
     <body>
+        @include('common.inc.header')
         @include('common.inc.messages')
-        @yield('content')
+            @yield('content')
+        @include('common.inc.footer')
     </body>
 </html>

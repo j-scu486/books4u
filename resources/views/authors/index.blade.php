@@ -1,4 +1,4 @@
-@extends('common.layouts.app')
+@extends('common.layouts.main')
 
 @section('content')
     <form action="/author/{{ $author->id }}" method="POST">
