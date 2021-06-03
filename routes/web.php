@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'BookController@show');
+Route::delete('/books/delete/{book_id}', 'BookController@destroy');
 

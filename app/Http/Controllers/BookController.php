@@ -30,4 +30,12 @@ class BookController extends Controller
                             'search_params' => $search_params
                             ]);
     }
+
+    public function destroy(int $id)
+    {
+        $book = Book::find($id);
+        $book->delete();
+
+        return redirect('/')->with('success', 'Book deleted!');
+    }
 }
