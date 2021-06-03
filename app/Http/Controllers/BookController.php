@@ -31,6 +31,16 @@ class BookController extends Controller
                             ]);
     }
 
+    public function showBySearchQuery(Request $request)
+    {
+        $url_query = $request->query();
+    }
+
+    public function showByOrderQuery(Request $request)
+    {
+
+    }
+
     public function store(Request $request)
     {
         $book = new Book();
