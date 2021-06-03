@@ -1,9 +1,9 @@
-@extends('layouts.app')
+@extends('common.layouts.app')
 
 @section('content')
     <h1>books4u</h1>
 
-    @include('inc.search')
+    @include('books.inc.search')
 
     <form action="/books/create" method="POST">
         @csrf
