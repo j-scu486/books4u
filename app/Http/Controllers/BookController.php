@@ -20,7 +20,7 @@ class BookController extends Controller
 
     public function show()
     {
-        return view('index', [
+        return view('books.index', [
                             'books' => Book::orderBy('title')->simplePaginate(5),
                             'authors' => Author::all(),
                             'search_params' => $this->search_params
@@ -38,7 +38,7 @@ class BookController extends Controller
             $books = Book::orderQuery($url_query);
         }
 
-        return view('index', [
+        return view('books.index', [
             'books' => $books->simplePaginate(5),
             'authors' => Author::all(),
             'search_params' => $this->search_params
