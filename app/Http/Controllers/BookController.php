@@ -31,6 +31,22 @@ class BookController extends Controller
                             ]);
     }
 
+    public function store(Request $request)
+    {
+        $book = new Book();
+
+        $this->validate($request, [
+            'title' => 'required',
+            'author' => 'required'
+        ]);
+
+        $book->title = $request->input('title');
+        $book->author_id = (int)$request->input('author');
+        $book->save();
+
+        return redirect('/')->with('success', 'You added a new book!');
+    }
+
     public function destroy(int $id)
     {
         $book = Book::find($id);
