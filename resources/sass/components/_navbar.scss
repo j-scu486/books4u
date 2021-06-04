@@ -1,0 +1,29 @@
+@use '../abstracts/' as *;
+
+.navbar {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        padding: 2rem;
+    }
+
+    &__links {
+        display: flex;
+        margin-right: 25px;
+    }
+
+    &__link {
+        margin: 0 25px;
+
+        a {
+            transition: color .25s;
+        }
+
+        a:hover {
+            color: $primary-orange;
+        }
+    }
+}

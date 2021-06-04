@@ -207,8 +207,43 @@ img {
      object-fit: cover;
 }
 
+.main-header {
+  font-size: 6rem;
+  font-family: "Oswald", sans-serif;
+  color: #264653;
+  letter-spacing: 2px;
+}
+
 body {
   color: black;
   font-family: "Open Sans", "Roboto", sans-serif;
+}
+
+.navbar {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  padding: 2rem;
+}
+
+.navbar__links {
+  display: flex;
+  margin-right: 25px;
+}
+
+.navbar__link {
+  margin: 0 25px;
+}
+
+.navbar__link a {
+  transition: color 0.25s;
+}
+
+.navbar__link a:hover {
+  color: #f4a261;
 }
 

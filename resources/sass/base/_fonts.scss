@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+
+.main-header {
+    font-size: 6rem;
+    font-family: 'Oswald', sans-serif;
+    color: $primary-dark-blue;
+    letter-spacing: 2px;
+}
