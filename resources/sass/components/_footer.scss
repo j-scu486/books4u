@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+
+.footer {
+    background-color: rgb(87, 87, 87);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        padding: 20px 60px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin-right: 45px;
+        list-style-type: none;
+    }
+
+    &__link {
+        margin: 5px 25px;
+        a {
+            color: #fff;
+            font-size: 2rem;
+            transition: color .25s;
+        }
+
+        a:hover {
+            color: $primary-orange;
+        }
+    }
+}
