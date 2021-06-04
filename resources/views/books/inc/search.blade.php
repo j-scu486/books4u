@@ -1,4 +1,5 @@
 <form class="form form--search" action="/search" method="GET">
+    <h3 class="header header--title">Find a book...!</h3>
     <div class="form-group">
         <label class="form-label" for="search">Search</label>
         <input class="form-control" type="text" name="search" id="search">
