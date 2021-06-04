@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+
+html {
+    font-size: 62.5%;
+  }
+
+
+  body {
+    font-size: 1.6em;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    user-select: none;
+    object-fit: cover;
+  }
+
