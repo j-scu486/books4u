@@ -21,6 +21,14 @@ class BookTest extends TestCase
     }
 
     /** @test */
+    public function it_joins_book_table_and_author_table()
+    {
+        $book = factory(Book::class)->create();
+        $joined_result = $book::withAuthorTable()->first();
+        $this->assertIsString($joined_result->full_name);
+    }
+
+    /** @test */
     public function it_returns_asc_order_query()
     {
         $search_query = ['orderby' => 'title', 'direction' => 'asc'];
