@@ -12,8 +12,8 @@
 */
 
 // Author
-Route::get('/author/{author_id}', 'AuthorController@edit');
-Route::post('/author/{author_id}', 'AuthorController@update');
+Route::get('/author/{author_id}', 'AuthorController@update');
+Route::post('/author/{author_id}', 'AuthorController@store');
 
 // Book
 Route::get('/', 'BookController@show');
