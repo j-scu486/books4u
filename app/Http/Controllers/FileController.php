@@ -43,61 +43,59 @@ class FileController extends Controller
         return view('files.index');
     }
 
-    public function downloadCSV()
+    public function downloadCSV($format_type)
     {
-        array_unshift($this->all_data, array_keys($this->all_data[0]));
-        array_unshift($this->title_only, array_keys($this->title_only[0]));
-        array_unshift($this->author_only, array_keys($this->author_only[0]));
+        array_unshift($this->$format_type, array_keys($this->$format_type[0]));
 
-        $callback = function()
+        $callback = function() use($format_type)
             {
                 $FH = fopen('php://output', 'w');
-                foreach ($this->all_data as $row) {
+                foreach ($this->$format_type as $row) {
                     fputcsv($FH, $row);
                 }
-                foreach ($this->title_only as $row) {
-                    fputcsv($FH, $row);
-                }
-                foreach ($this->author_only as $row) {
-                    fputcsv($FH, $row);
-                }
+
                 fclose($FH);
             };
 
         return response()->stream($callback, 200, $this->headers('text/csv', 'books.csv'));
     }
 
-    public function downloadXML()
+    public function downloadXML($format_type)
     {
-        $callback = function()
+        $callback = function() use($format_type)
         {
             $xml = new XMLWriter();
             $xml->openURI('php://output');
             $xml->setIndent(true);
             $xml->startDocument('1.0');
-            $xml->startElement('books');
-            foreach ($this->all_data as $item) {
-                $xml->startElement('book');
-                $xml->writeElement('author', $item['full_name']);
-                $xml->writeElement('title', $item['title']);
-                $xml->endElement();
+            switch($format_type)
+            {
+                case 'all_data':
+                    $xml->startElement('books');
+                    foreach ($this->all_data as $item) {
+                        $xml->startElement('book');
+                        $xml->writeElement('author', $item['full_name']);
+                        $xml->writeElement('title', $item['title']);
+                        $xml->endElement();
+                    }
+                    break;
+                case 'title_only':
+                    $xml->startElement('titles');
+                    foreach ($this->all_data as $item) {
+                        $xml->startElement('title');
+                        $xml->writeElement('title', $item['title']);
+                        $xml->endElement();
+                    }
+                    break;
+                case 'author_only':
+                    $xml->startElement('authors');
+                    foreach ($this->author_only as $author) {
+                        $xml->startElement('author');
+                        $xml->writeElement('name', $author['full_name']);
+                        $xml->endElement();
+                    }
+                    break;
             }
-            $xml->endElement();
-            $xml->startElement('titles');
-            foreach ($this->all_data as $item) {
-                $xml->startElement('title');
-                $xml->writeElement('title', $item['title']);
-                $xml->endElement();
-            }
-            $xml->endElement();
-            $xml->startElement('authors');
-            foreach ($this->author_only as $author) {
-                $xml->startElement('author');
-                $xml->writeElement('name', $author['full_name']);
-                $xml->endElement();
-            }
-
-            $xml->endElement();
             $xml->endDocument();
         };
 
