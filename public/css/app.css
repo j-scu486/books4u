@@ -215,7 +215,7 @@ img {
 }
 
 .main-header--footer {
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: #fff;
 }
 
@@ -310,7 +310,7 @@ body {
 .footer {
   background-color: #575757;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -331,7 +331,7 @@ body {
 
 .footer__link a {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.6rem;
   transition: color 0.25s;
 }
 
@@ -367,6 +367,15 @@ body {
   letter-spacing: 1.6px;
   width: 150px;
   cursor: pointer;
+}
+
+.btn--download {
+  background-color: #f4a261;
+  margin: 20px 0;
+}
+
+.btn--download a {
+  color: #fff;
 }
 
 .btn--form-submit {
@@ -439,5 +448,31 @@ body {
 
 .form-container {
   display: flex;
+}
+
+.author-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.files-container {
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0 20px;
+  border-radius: 8px;
 }
 

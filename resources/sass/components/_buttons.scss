@@ -9,6 +9,15 @@
     width: 150px;
     cursor: pointer;
 
+    &--download {
+        background-color: $primary-orange;
+        margin: 20px 0;
+
+        a {
+            color: #fff;
+        }
+    }
+
     &--form-submit {
         background-color: $primary-dark-blue;
         color: #fff;
