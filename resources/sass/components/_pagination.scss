@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.page-item {
+    margin: 10px 20px;
+
+    &.disabled .page-link {
+        color: #ccc;
+    }
+}
+
+.page-link {
+    color: $primary-dark-blue;
+}
