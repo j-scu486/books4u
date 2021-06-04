@@ -26,7 +26,7 @@
         @endforeach
     </table>
     @else
-    <p>No Results!</p>
+    <h4 class="header header--no-results">Sorry, we couldn't find anything. Try another search!</h4>
     @endif
 
     @if (method_exists($books, 'links'))

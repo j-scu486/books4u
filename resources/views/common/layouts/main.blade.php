@@ -10,8 +10,8 @@
     </head>
     <body>
         @include('common.inc.nav')
-        @include('common.inc.messages')
         <div class="container">
+            @include('common.inc.messages')
             @yield('content')
         </div>
         @include('common.inc.footer')

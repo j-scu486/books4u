@@ -16,4 +16,8 @@
     font-size: 4rem;
     margin: 20px 0;
     color: $primary-teal;
+
+    &--no-results {
+        font-size: 2rem;
+    }
 }

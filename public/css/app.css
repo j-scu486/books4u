@@ -225,6 +225,10 @@ img {
   color: #2a9d8f;
 }
 
+.header--no-results {
+  font-size: 2rem;
+}
+
 body {
   color: black;
   font-family: "Open Sans", "Roboto", sans-serif;
@@ -393,6 +397,39 @@ body {
   color: #fff;
   letter-spacing: 1.6px;
   cursor: pointer;
+}
+
+.message {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 2rem;
+}
+
+.message--success {
+  background-color: #65e665;
+}
+
+.message--error {
+  background-color: #eb2929;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.page-item {
+  margin: 10px 20px;
+}
+
+.page-item.disabled .page-link {
+  color: #ccc;
+}
+
+.page-link {
+  color: #264653;
 }
 
 .container {

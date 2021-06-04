@@ -24,7 +24,7 @@
     }
 
     &--delete {
-        background-color: rgb(235, 41, 41);
+        background-color: $primary-red;
         color: #fff;
         width: 100px;
 
@@ -32,7 +32,7 @@
             text-transform: uppercase;
             font-family: 'Oswald', sans-serif;
             border: none;
-            background-color: rgb(235, 41, 41);
+            background-color: $primary-red;
             color: #fff;
             letter-spacing: 1.6px;
             cursor: pointer;
