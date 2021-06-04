@@ -307,6 +307,10 @@ body {
   cursor: pointer;
 }
 
+.sort-form {
+  display: inline;
+}
+
 .footer {
   background-color: #575757;
   display: flex;
@@ -405,6 +409,15 @@ body {
   background-color: #eb2929;
   color: #fff;
   letter-spacing: 1.6px;
+  cursor: pointer;
+}
+
+.sort-asc,
+.sort-desc {
+  background-color: inherit;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 

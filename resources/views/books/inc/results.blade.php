@@ -20,7 +20,11 @@
             <td class="table__item">{{ $book->author->full_name }}</td>
             <td class="table__item">
                 <div class="table__options">
-                    <button class="btn btn--edit"><a href="/author/{{ $book->author->id }}">edit <i class="fas fa-pencil-alt"></i></a></button>
+                    <button class="btn btn--edit">
+                        <a href="/author/{{ $book->author->id }}">
+                            edit <i class="fas fa-pencil-alt"></i>
+                        </a>
+                    </button>
                     <form action="/books/delete/{{ $book->id }}" method="POST">
                         @csrf
                         @method('DELETE')
