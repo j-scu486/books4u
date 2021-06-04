@@ -95,6 +95,8 @@ class FileController extends Controller
                         $xml->endElement();
                     }
                     break;
+                default:
+                    abort(404);
             }
             $xml->endDocument();
         };
