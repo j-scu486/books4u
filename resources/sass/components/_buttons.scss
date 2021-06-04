@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+.btn {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    padding: 10px;
+    letter-spacing: 1.6px;
+    width: 150px;
+    cursor: pointer;
+
+    &--form-submit {
+        background-color: $primary-teal;
+        color: #fff;
+    }
+}

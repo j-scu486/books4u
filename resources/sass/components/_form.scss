@@ -1,0 +1,44 @@
+@use '../abstracts/' as *;
+
+.form {
+    &--search {
+
+    }
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    &--submit {
+        margin: 25px 0;
+    }
+}
+
+.form-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1.6px;
+}
+
+.form-control {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    font-size: 2rem;
+}
+
+.form-submit {
+    background-color: $primary-teal;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    padding: 10px;
+    letter-spacing: 1.6px;
+    width: 150px;
+    cursor: pointer;
+}

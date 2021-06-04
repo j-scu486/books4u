@@ -11,7 +11,9 @@
     <body>
         @include('common.inc.nav')
         @include('common.inc.messages')
+        <div class="container">
             @yield('content')
+        </div>
         @include('common.inc.footer')
         <script src="{{ asset ('js/app.js') }}"></script>
     </body>
