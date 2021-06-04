@@ -22,10 +22,15 @@
 .form-control {
     margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px;
     width: 80%;
     font-size: 2rem;
+
+    &:focus {
+        border: 2px solid $primary-orange;
+        outline: $primary-orange;
+    }
 }
 
 .form-submit {

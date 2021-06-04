@@ -38,6 +38,11 @@ class FileController extends Controller
         ];
     }
 
+    public function show()
+    {
+        return view('files.index');
+    }
+
     public function downloadCSV()
     {
         array_unshift($this->all_data, array_keys($this->all_data[0]));

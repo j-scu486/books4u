@@ -5,10 +5,14 @@
     font-family: 'Oswald', sans-serif;
     color: $primary-dark-blue;
     letter-spacing: 2px;
+
+    &--footer {
+        font-size: 5rem;
+        color: #fff;
+    }
 }
 
 .header {
-
     font-size: 4rem;
     margin: 20px 0;
     color: $primary-teal;

@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.table {
+    width: 100%;
+
+    &__header {
+        padding: 10px 15px;
+        text-align: left;
+        background-color: $primary-dark-blue;
+        color: white;
+    }
+
+    &__item {
+        padding: 10px 15px;
+    }
+
+    &__options {
+        display: flex;
+        justify-content: space-between;
+    }
+}

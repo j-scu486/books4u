@@ -13,4 +13,29 @@
         background-color: $primary-dark-blue;
         color: #fff;
     }
+
+    &--edit {
+        background-color: $primary-yellow;
+        width: 100px;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    &--delete {
+        background-color: rgb(235, 41, 41);
+        color: #fff;
+        width: 100px;
+
+        input {
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            border: none;
+            background-color: rgb(235, 41, 41);
+            color: #fff;
+            letter-spacing: 1.6px;
+            cursor: pointer;
+        }
+    }
 }
