@@ -9,9 +9,7 @@ class AuthorController extends Controller
 {
     public function edit($id)
     {
-        $author = Author::find($id);
-
-        return view('author')->with('author', $author);
+        return view('authors.index')->with(['author' => Author::find($id)]);
     }
 
     public function update(Request $request, $id)
@@ -21,7 +19,6 @@ class AuthorController extends Controller
         ]);
 
         $author = Author::find($id);
-
         $author->full_name = $request->input('full_name');
         $author->save();
 
