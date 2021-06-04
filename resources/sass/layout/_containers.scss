@@ -6,3 +6,29 @@
 .form-container {
     display: flex;
 }
+
+.author-container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.files-container {
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 0 20px;
+    border-radius: 8px;
+}

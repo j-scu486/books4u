@@ -23,5 +23,5 @@ Route::delete('/books/delete/{book_id}', 'BookController@destroy');
 
 // Downloads
 Route::get('/download', 'FileController@show')->name('files.index');
-Route::get('/download/csv', 'FileController@downloadCSV');
-Route::get('/download/xml', 'FileController@downloadXML');
+Route::get('/download/csv', 'FileController@downloadCSV')->name('files.download-csv');
+Route::get('/download/xml', 'FileController@downloadXML')->name('files.download-xml');;
