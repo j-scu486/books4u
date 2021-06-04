@@ -4,37 +4,13 @@
         <tr class="table__row">
             <th class="table__header">
                 Title
-            <form class="sort-form" action="/search" method="GET">
-                <button class="sort-asc" type="submit" value="test">
-                    <input type="hidden" name="orderby" value="title" />
-                    <input type="hidden" name="direction" value="asc" />
-                    <i class="fas fa-caret-up"></i>
-                </button>
-            </form>
-            <form class="sort-form" action="/search" method="GET">
-                <button class="sort-desc" type="submit" value="test">
-                    <input type="hidden" name="orderby" value="title" />
-                    <input type="hidden" name="direction" value="desc" />
-                    <i class="fas fa-caret-down"></i>
-                </button>
-            </form>
+                @include('books.inc.sort', ['orderby' => 'title', 'direction' => 'asc'])
+                @include('books.inc.sort', ['orderby' => 'title', 'direction' => 'desc'])
             </th>
             <th class="table__header">
                 Author
-                <form class="sort-form" action="/search" method="GET">
-                    <button class="sort-asc" type="submit" value="test">
-                        <input type="hidden" name="orderby" value="author" />
-                        <input type="hidden" name="direction" value="asc" />
-                        <i class="fas fa-caret-up"></i>
-                    </button>
-                </form>
-                <form class="sort-form" action="/search" method="GET">
-                    <button class="sort-desc" type="submit" value="test">
-                        <input type="hidden" name="orderby" value="author" />
-                        <input type="hidden" name="direction" value="desc" />
-                        <i class="fas fa-caret-down"></i>
-                    </button>
-                </form>
+                @include('books.inc.sort', ['orderby' => 'author', 'direction' => 'asc'])
+                @include('books.inc.sort', ['orderby' => 'author', 'direction' => 'desc'])
             </th>
             <th class="table__header">Options</th>
         </tr>
