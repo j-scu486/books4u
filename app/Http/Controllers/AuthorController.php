@@ -7,12 +7,12 @@ use App\Author;
 
 class AuthorController extends Controller
 {
-    public function edit($id)
+    public function update($id)
     {
         return view('authors.index')->with(['author' => Author::find($id)]);
     }
 
-    public function update(Request $request, $id)
+    public function store(Request $request, $id)
     {
         $this->validate($request, [
             'full_name' => 'required'
