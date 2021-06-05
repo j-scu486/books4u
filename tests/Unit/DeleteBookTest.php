@@ -24,7 +24,6 @@ class DeleteBookTest extends TestCase
             '_token' => csrf_token(),
         ));
         $this->assertDeleted($book);
-
     }
 
     /** @test */
