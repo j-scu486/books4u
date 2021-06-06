@@ -17,6 +17,24 @@ Includes the following features:
 
 ## Local 
 
+Clone this repo to your desired directory. Run the following two commands to install dependicies for npm and laravel:
+```
+npm install
+composer install
+```
+An app key will also need to be generated:
+```
+php artisan key:generate
+```
+Switch ```.env.example``` to ```.env``` . You will need to change these settings depending on your database setup.
+Once these settings are in place, migrations can be run with:
+
+```php artisan migrate```
+
+Then, run the server locally:
+
+``` php artisan serve```
+
 ## Deployment
 
 The application is configured to be deployed on AWS Elasticbeanstalk.
