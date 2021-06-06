@@ -46,7 +46,7 @@ Steps to reproduce (From Elasticbeanstalk console):
 - Platform should be set to PHP 7.4 on Linux 2 instance
 - Upload code from zip file
 - Select "Configure more options"
-- Under "Software", set document root to "public"
+- Under "Software", set document root to "/public"
 - Under "Database", set engine to mysql, version 8.x. Username and password as desired
 - Create environment.
 
@@ -68,7 +68,7 @@ Steps to reproduce (From Elasticbeanstalk console):
 ],
 
 ```
-Scripts will be run automatically to make migrations and seed the database with dummydata. These scripts are located
+Scripts will be run automatically to make migrations and seed the database with dummy data. These scripts are located
 in```/.ebextensions```
 
 For further information on deploying Laravel on EBS , see https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/php-laravel-tutorial.html#php-laravel-tutorial-database
