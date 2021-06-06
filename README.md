@@ -1,5 +1,7 @@
 # Books4u: CRUD application in Laravel
 
+http://yarakucrud-env.eba-m6dkmzq8.us-east-2.elasticbeanstalk.com/
+
 ## About
 
 Simple CRUD application written in Laravel 6.2.
