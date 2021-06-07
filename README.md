@@ -38,6 +38,7 @@ Copy ```.env.example``` to ```.env``` . You will need to change these settings d
 Once these settings are in place, migrations can be run with:
 
 ```php artisan migrate```
+
 If you wish to populate the database with dummy data, you may seed it with the following commands:
 ```
 php artisan db:seed --class=AuthorSeeder
