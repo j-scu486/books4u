@@ -17,32 +17,6 @@ Includes the following features:
         - A list with only Titles
         - A list with only Authors
 
-## Local 
-
-Clone this repo to your desired directory. Run the following two commands to install dependicies for npm and laravel:
-```
-npm install
-composer install
-```
-An app key will also need to be generated:
-```
-php artisan key:generate
-```
-Switch ```.env.example``` to ```.env``` . You will need to change these settings depending on your database setup.
-Once these settings are in place, migrations can be run with:
-
-```php artisan migrate```
-
-If you wish to populate the database with dummy data, you may seed it with the following commands:
-```
-php artisan db:seed --class=AuthorSeeder
-php artisan db:seed --class=BookSeeder
-```
-
-Then, run the server locally:
-
-``` php artisan serve```
-
 ## Deployment
 
 The application is configured to be deployed on AWS Elasticbeanstalk.
