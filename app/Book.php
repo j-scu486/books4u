@@ -16,11 +16,16 @@ class Book extends Model
         return $query->join('authors', 'authors.id', '=', 'books.author_id');
     }
 
+    public static function scopeWhereQueryIsLike(object $query, string $search_type, string $search_query)
+    {
+        return $query->where($search_type, 'like', '%' . $search_query . '%');
+    }
+
     public static function searchQuery(array $url_query)
     {
         return $url_query['search_type'] == 'author'
-            ? Book::withAuthorTable()->where('full_name', $url_query['search'])
-            : Book::where($url_query['search_type'], $url_query['search']);
+            ? Book::withAUthorTable()->whereQueryIsLike('full_name', $url_query['search'])
+            : Book::whereQueryIsLike($url_query['search_type'], $url_query['search']);
     }
 
     public static function orderQuery(array $url_query)
