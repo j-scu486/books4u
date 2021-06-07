@@ -16,19 +16,25 @@ Includes the following features:
         - A list with Title and Author
         - A list with only Titles
         - A list with only Authors
-
+        
 ## Local 
 
-Clone this repo to your desired directory. Run the following two commands to install dependicies for npm and laravel:
+Clone this repo to your desired directory. 
+
 ```
-npm install
+git clone https://github.com/j-scu486/books4u.git
+```
+
+Run the following two commands to install dependicies for npm and laravel:
+```
+npm install && npm run prod
 composer install
 ```
 An app key will also need to be generated:
 ```
 php artisan key:generate
 ```
-Switch ```.env.example``` to ```.env``` . You will need to change these settings depending on your database setup.
+Copy ```.env.example``` to ```.env``` . You will need to change these settings depending on your database setup.
 Once these settings are in place, migrations can be run with:
 
 ```php artisan migrate```
@@ -38,10 +44,9 @@ If you wish to populate the database with dummy data, you may seed it with the f
 php artisan db:seed --class=AuthorSeeder
 php artisan db:seed --class=BookSeeder
 ```
-
 Then, run the server locally:
-
 ``` php artisan serve```
+
 
 ## Deployment
 
