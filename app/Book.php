@@ -24,7 +24,7 @@ class Book extends Model
     public static function searchQuery(array $url_query)
     {
         return $url_query['search_type'] == 'author'
-            ? Book::withAUthorTable()->whereQueryIsLike('full_name', $url_query['search'])
+            ? Book::withAuthorTable()->whereQueryIsLike('full_name', $url_query['search'])
             : Book::whereQueryIsLike($url_query['search_type'], $url_query['search']);
     }
 
